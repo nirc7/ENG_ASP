@@ -1,0 +1,26 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        master Start <br/>
+        label from inside the page: <asp:Label runat="server" ID="lblInMaster"></asp:Label><br /><br />
+        <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" /><br /><br />
+        <a href="Default2.aspx">Default2.aspx</a> | 
+        <a href="Default3.aspx">Default3.aspx</a><br />
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <br /><br />master END <br/>
+    </div>
+    </form>
+</body>
+</html>
