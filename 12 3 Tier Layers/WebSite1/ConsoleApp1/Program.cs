@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,12 +12,21 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            DBServices dbs = new DBServices();
-            Person p =  dbs.Login("avi", "123");
+            Person p = DBServices.Login("avi", "123");
             if (p!=null)
             {
                 p.ID *= 7;
+                Console.WriteLine(p.ID);
                 //code algorithm!!!
+            }
+            else
+            {
+                Console.WriteLine("this person doesn't exists");
+            }
+
+            foreach (var item in ConfigurationManager.AppSettings.AllKeys)
+            {
+                Console.WriteLine(item);
             }
         }
     }
