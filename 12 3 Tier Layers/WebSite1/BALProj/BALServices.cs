@@ -14,8 +14,7 @@ namespace BALProj
         {
             //DBServices dbs = new DBServices();
             //Person p = dbs.Login(name, pass);
-            Person p = null;
-             DBServices.Login(name, pass);
+            Person p = DBServices.Login(name, pass);
             
             //if (p != null)
             //{
